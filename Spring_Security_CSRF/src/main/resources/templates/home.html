@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <h1>This is CRSF</h1>
+   <br>
+   <form action="/saveData" method="post">
+      <input name="uname"/><br>
+      <input type="hidden" th:name="${_datta.parameterName}"
+       th:value="${_datta.token}"/>
+      
+      <input type="submit" value="save Record"/>
+   
+   </form>
+   
+</body>
+</html>
